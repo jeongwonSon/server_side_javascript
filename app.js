@@ -15,6 +15,38 @@ app.get('/',function(req, res){
 	res.send('Hello homepage');	// 사용설명서에 적혀있음. 
 });
 
+// 수정되는 경우 node를 껐다가 다시 실행해야 함(동적으로 처리)
+app.get('/dynamic',function(req, res){
+	// 여러줄을 입력하고 싶을 경우 역슬래시 \ 를 끝에 입력하면 됨, 하지만 보기 좋게 쓰기 위해서는 아래와 같이 작성할 것
+	
+	var lis = '';
+	for(var i=0; i<5; i++){
+		lis = lis + '<li>coding</li>';
+	}
+	
+	var time = Date();
+	
+	// 문자안에 변수 넣을 떄 : ${} 특수 기호
+	var output = `
+		<!DOCTYPE html>
+		<html>
+			<head>
+				<meta charset="utf-8">
+				<title>Insert title here</title>
+			</head>
+		<body>
+			Hello, dynamic!
+			<ul>
+				${lis}
+			</ul>
+			${time}
+		</body>
+		</html>`;	// 작은 따옴표가 아닌 특수 기호임 
+	
+	res.send(output);	
+});
+
+
 app.get('/route', function(req, res){
 	res.send('Hello Router, <img src="/route.png">');
 });
