@@ -4,9 +4,19 @@
 
 var express = require('express');
 var app = express(); // application이라는 것을 리턴함, express()
+
+/**
+ * 정적인 파일을 서비스하기 위해 추가한 코드 
+ */
+app.use(express.static('public'));  // 관습적으로 public 이라는 디렉토리로 사용함
+
 app.get('/',function(req, res){
 	// 사용자가 home으로 접속했을 때, 우리가 실행시킨 get()을 통해서 두번째 인자로 전달한 함수가 실행되도록 약속되어 있음
 	res.send('Hello homepage');	// 사용설명서에 적혀있음. 
+});
+
+app.get('/route', function(req, res){
+	res.send('Hello Router, <img src="/route.png">');
 });
 
 // get이라는 메소드를 어떻게 부르냐면 라우터, 하는 일을 라우팅이라고 함

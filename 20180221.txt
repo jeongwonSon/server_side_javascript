@@ -1,0 +1,16 @@
+[연결성]
+*
+javaScript, Npm, Router은 웹 어플리케이션 만들때 필요
+*
+nodejs, module, controller 연결할 대상을 제공해주는 것
+
+*
+Module : express, underscore, Jade 등
+Npm 
+
+*
+Router : 사용자의 접속, 요청을 어떤 컨트롤러에 전달해줄 것인가 중개자(연결자) 역할
+Controller 
+
+[express- 정적인 파일 서비스 하는 방법]
+app.js에 app.use(express.static('public')); 코드 추가
