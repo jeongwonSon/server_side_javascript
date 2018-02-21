@@ -5,10 +5,20 @@
 var express = require('express');
 var app = express(); // application이라는 것을 리턴함, express()
 
+app.locals.pretty = true;   // jade(pug)의 코드를 예쁘게 표현할 수 있음
+// pug와 express를 연결함
+app.set('view engine', 'pug');
+app.set('views', './views');  // pug(jade) 파일을 views 안에 넣으면 됨
+
 /**
  * 정적인 파일을 서비스하기 위해 추가한 코드 
  */
 app.use(express.static('public'));  // 관습적으로 public 이라는 디렉토리로 사용함
+
+app.get('/template',function(req, res){
+  // temp파일을 렌더링해서 전송한다는 뜻
+  res.render('temp', {time:Date(), title: 'Pug'}); // pug(jade) 문법에 맞게 읽어와서 화면에 보여줌
+})
 
 app.get('/',function(req, res){
 	// 사용자가 home으로 접속했을 때, 우리가 실행시킨 get()을 통해서 두번째 인자로 전달한 함수가 실행되도록 약속되어 있음
@@ -41,7 +51,7 @@ app.get('/dynamic',function(req, res){
 			</ul>
 			${time}
 		</body>
-		</html>`;	// 작은 따옴표가 아닌 특수 기호임 
+		</html>`;	// 작은 따옴표가 아닌 특수 기호임 (그레이브 액센트)
 	
 	res.send(output);	
 });
