@@ -3,6 +3,7 @@
  */
 
 var express = require('express');
+var bodyParser = require('body-parser');  // post 방식으로 전송한 데이터 지원을 위해 필요함
 var app = express(); // application이라는 것을 리턴함, express()
 
 app.locals.pretty = true;   // jade(pug)의 코드를 예쁘게 표현할 수 있음
@@ -14,6 +15,22 @@ app.set('views', './views');  // pug(jade) 파일을 views 안에 넣으면 됨
  * 정적인 파일을 서비스하기 위해 추가한 코드 
  */
 app.use(express.static('public'));  // 관습적으로 public 이라는 디렉토리로 사용함
+app.use(bodyParser.urlencoded({ extended: false })); // bodyParser : 미들웨어를 통과한 다음에 라우터가 동작하게 됨 
+
+app.get('/form', function(req,res){
+  res.render('form');
+});
+
+app.get('/form_receiver', function(req,res){
+  var title = req.query.title;
+  var description = req.query.description;
+  res.send(title+','+description);
+});
+app.post('/form_receiver', function(req,res){
+  var title = req.body.title;
+  var description = req.body.description;
+  res.send(title+','+description);
+});
 
 app.get('/topic/:id',function(req,res){
   
@@ -27,9 +44,9 @@ app.get('/topic/:id',function(req,res){
   ];
   
   var output = `
-    <a href="/topic?id=0">javaScript</a><br>
-    <a href="/topic?id=1">Nodejs</a><br>
-    <a href="/topic?id=2">Express</a><br><br>
+    <a href="/topic/0">javaScript</a><br>
+    <a href="/topic/1">Nodejs</a><br>
+    <a href="/topic/2">Express</a><br><br>
     
     ${topics[req.params.id]}
     
@@ -37,17 +54,17 @@ app.get('/topic/:id',function(req,res){
   
   res.send(output); // parameter는 req.query.파라미터명을 넣으면 됨
 //  res.send(req.query.id +',' + req.query.name); // 쿼리스트링 여러개 쓸 경우
-})
+});
 
 app.get('/topic/:id/:mode', function(req,res){
   res.send(req.params.id + ',' + req.params.mode);
-})
+});
 
 
 app.get('/template',function(req, res){
   // temp파일을 렌더링해서 전송한다는 뜻
   res.render('temp', {time:Date(), title: 'Pug'}); // pug(jade) 문법에 맞게 읽어와서 화면에 보여줌
-})
+});
 
 app.get('/',function(req, res){
 	// 사용자가 home으로 접속했을 때, 우리가 실행시킨 get()을 통해서 두번째 인자로 전달한 함수가 실행되도록 약속되어 있음
