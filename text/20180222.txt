@@ -1,0 +1,28 @@
+[package.json, package-lock.json]
+현재 설치한 npm version은 5.6.0 -> npm 5.x.x 버전부터 package.json, package-lock.json 함께 생성됨.
+
+** package.json
+  : 설치한 패키지와 버전을 명시한 파일
+    이 파일을 통해서 어떤 환경에서든지 dependencies에 따라 npm이 필요한 패키지를 설치해서 이용할 수 있음.
+ 
+** package-lock.json
+  : 프로젝트에 사용된 패키지 버전과 그 패키지가 요구하는 다른 패키지 및 해당 버전 URI등 좀 더 구체적인 정보가 담김.
+
+==> package.json 수정되면 package-lock.json이 기각되는 방식으로 충돌을 해결함.
+
+(참고 : https://medium.com/@pyeonjy97/package-json%EA%B3%BC-package-lock-json%EC%9D%98-%ED%98%BC%EC%9E%AC-83b80518c453)
+
+[템플릿]
+  여기에 적용된 템플릿은 pug(jade), 그 외에도 ejs, handlbar, twig, swig이 있음
+  ejs는 기존 사용하던 html과 같음(협업시 사용하기 좋음)
+
+[supervisor]
+  해당 명령어 사용하려면 npm 통해서 설치해야 함
+  # npm install supervisor -g (전역, 모든 프로젝트간 사용가능)
+  # supervisor app.js : 동적인 파일 수정시, node를 재시작할 필요가 없음
+  
+  # rs 입력하면 재시작 됨
+  
+  
+<Express-URL을 이용한 정보의 전달>
+ 쿼리스트링(query String) : URL에 붙은 값 ex) URL~/detail?id=1
