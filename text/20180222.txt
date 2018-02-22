@@ -25,4 +25,8 @@
   
   
 <Express-URL을 이용한 정보의 전달>
- 쿼리스트링(query String) : URL에 붙은 값 ex) URL~/detail?id=1
+  쿼리스트링(query String) : URL에 붙은 값 ex) URL~/detail?id=1
+  시멘틱URL(semantic URL) 
+    ex) example.com/name (semantic URL), example.com?page=name (non-semantic URL)
+    
+    기존에 'req.query.파라미터명'을 적었던 부분을 시멘틱으로 사용하려면 'req.params.파라미터명'으로 적어야 함.

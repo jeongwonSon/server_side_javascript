@@ -15,7 +15,7 @@ app.set('views', './views');  // pug(jade) 파일을 views 안에 넣으면 됨
  */
 app.use(express.static('public'));  // 관습적으로 public 이라는 디렉토리로 사용함
 
-app.get('/topic',function(req,res){
+app.get('/topic/:id',function(req,res){
   
   // 해당 부분을 파일이나 db로 바꾸면 됨
   var topics = [
@@ -31,11 +31,16 @@ app.get('/topic',function(req,res){
     <a href="/topic?id=1">Nodejs</a><br>
     <a href="/topic?id=2">Express</a><br><br>
     
-    ${topics[req.query.id]}
+    ${topics[req.params.id]}
     
-  `
+  `;
+  
   res.send(output); // parameter는 req.query.파라미터명을 넣으면 됨
 //  res.send(req.query.id +',' + req.query.name); // 쿼리스트링 여러개 쓸 경우
+})
+
+app.get('/topic/:id/:mode', function(req,res){
+  res.send(req.params.id + ',' + req.params.mode);
 })
 
 
