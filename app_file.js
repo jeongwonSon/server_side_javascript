@@ -10,6 +10,17 @@ app.set('view engine', 'pug');
 app.get('/topic/new',function(req,res){
   res.render('new');
 });
+app.get('/topic', function(req,res){
+  // 글 목록이 화면에 표시되게
+  fs.readdir('data', function(err, files){
+    if(err){
+      console.log(err);
+      res.status(500).send('Internal Server Error');  // error
+    }
+    res.render('view', {topics:files});
+    
+  });
+});
 app.post('/topic',function(req,res){
   var title = req.body.title;
   var description = req.body.description;
