@@ -23,6 +23,8 @@
   
   # rs 입력하면 재시작 됨
   
+  (watcher 이라고 함, 바뀐 걸 보고 재시작 해주는 방식)
+  
   
 <Express-URL을 이용한 정보의 전달>
   쿼리스트링(query String) : URL에 붙은 값 ex) URL~/detail?id=1
