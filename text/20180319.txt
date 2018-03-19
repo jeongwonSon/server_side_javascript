@@ -1,0 +1,21 @@
+
+객체지향, 클라이언트, 서버, 포트, 리스닝, 웹서버 80
+http를 통해 웹브라우저에 접근했다는 것을 알 수 있음, http는 80 포트를 쓰기로 약속이 되어있어서 생략 가능
+(https일 경우는 안 된다)
+: 인터넷이 어떻게 동작하는 가? 에 관한 이해 중요!
+http, os 모듈 (Nodejs가 제공하는 모듈)
+npm(node package manager) : node계의 앱스토어
+글로벌 : 컴퓨터 전역에서 사용되는 독립적 사용(소프트웨어로 사용)
+로컬 : 현재 패키지를 설치하는 프로젝트의 부품으로 사용 
+
+
+
+---------메모장
+
+/usr/java/apache-tomcat-7.0.56-new-employee/bin/catalina.sh stop
+/usr/java/apache-tomcat-7.0.56-new-employee/bin/catalina.sh start
+ps -ef | grep new_employee
+sudo kill -9
+ps -ef | grep tomcat
+
+
