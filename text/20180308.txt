@@ -1,19 +1,19 @@
-:ÄÝ·ÐÀº Æ¯¼öÇÑ ¹®ÀÚ
+:ì½œë¡ ì€ íŠ¹ìˆ˜í•œ ë¬¸ìž
 
 topics
 
 https://opentutorials.org/course/2136/11950
 
-[º»¹® ÀÐ±â]
+[ë³¸ë¬¸ ì½ê¸°]
 
-[ÄÚµåÀÇ °³¼±]
-¶ó¿ìÆ®¿¡ ¿©·¯°³ÀÇ path¸¦ °¡Áú ¼ö ÀÖÀ½
---> ´ë°ýÈ£·Î Ç¥Çö °¡´ÉÇÔ
+[ì½”ë“œì˜ ê°œì„ ]
+ë¼ìš°íŠ¸ì— ì—¬ëŸ¬ê°œì˜ pathë¥¼ ê°€ì§ˆ ìˆ˜ ìžˆìŒ
+--> ëŒ€ê´„í˜¸ë¡œ í‘œí˜„ ê°€ëŠ¥í•¨
 app.get(['/topic','/topic/:id']
-±âÁ¸ ÄÚµå¿¡¼­ Áßº¹À» Á¦°ÅÇÔ -> ¼Ò½º¸¦ À¯Áöº¸¼öÇÏ±â ÆíÇØÁü
+ê¸°ì¡´ ì½”ë“œì—ì„œ ì¤‘ë³µì„ ì œê±°í•¨ -> ì†ŒìŠ¤ë¥¼ ìœ ì§€ë³´ìˆ˜í•˜ê¸° íŽ¸í•´ì§
 
-±âÁ¸ ¼Ò½º¿¡ ¶ó¿ìÆ®°¡ 2°³¿´À½, id¸¦ ¹Þ´Â topic°ú ±×³É topic µû·Î ÀÖ¾úÀ½
+ê¸°ì¡´ ì†ŒìŠ¤ì— ë¼ìš°íŠ¸ê°€ 2ê°œì˜€ìŒ, idë¥¼ ë°›ëŠ” topicê³¼ ê·¸ëƒ¥ topic ë”°ë¡œ ìžˆì—ˆìŒ
 
-view.pugÀÇ NEW¸¦ ´©¸£¸é formÀ¸·Î ÀÌµ¿ °¡´É
-form¿¡¼­ submitÀ» ´©¸£¸é ±âÁ¸¿¡ success¶ó°í ¶¹¾ú´Âµ¥,
-ÇØ´ç ÀÛ¼ºÇÑ ±ÛÀÌ ¶ßµµ·Ï ¼öÁ¤ÇÔ
+view.pugì˜ NEWë¥¼ ëˆ„ë¥´ë©´ formìœ¼ë¡œ ì´ë™ ê°€ëŠ¥
+formì—ì„œ submitì„ ëˆ„ë¥´ë©´ ê¸°ì¡´ì— successë¼ê³  ë–´ì—ˆëŠ”ë°,
+í•´ë‹¹ ìž‘ì„±í•œ ê¸€ì´ ëœ¨ë„ë¡ ìˆ˜ì •í•¨

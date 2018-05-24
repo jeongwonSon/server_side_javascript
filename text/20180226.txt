@@ -1,9 +1,9 @@
-<À¥¾îÇÃ¸®ÄÉÀÌ¼Ç Á¦ÀÛ:"https://opentutorials.org/course/2136/11950">
-[º»¹®ÀúÀå]
-  body-Parser »ç¿ë
+<ì›¹ì–´í”Œë¦¬ì¼€ì´ì…˜ ì œì‘:"https://opentutorials.org/course/2136/11950">
+[ë³¸ë¬¸ì €ì¥]
+  body-Parser ì‚¬ìš©
   
-[±Û ¸ñ·Ï ¸¸µé±â]
-  Iteration ¹İº¹¹®
+[ê¸€ ëª©ë¡ ë§Œë“¤ê¸°]
+  Iteration ë°˜ë³µë¬¸
   
 ex)
   ul
