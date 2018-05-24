@@ -21,7 +21,7 @@
   # npm install supervisor -g (전역, 모든 프로젝트간 사용가능)
   # supervisor app.js : 동적인 파일 수정시, node를 재시작할 필요가 없음
   
-  # rs 입력하면 재시작 됨
+  # rs 입력하면 재시작 됨 (구동되는 상태에서 rs 치고 enter 누르면 재시작 된다 : 20180524추가)
   
   (watcher 이라고 함, 바뀐 걸 보고 재시작 해주는 방식)
   
